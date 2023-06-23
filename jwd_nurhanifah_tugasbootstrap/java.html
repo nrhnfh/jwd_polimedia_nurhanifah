@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registrasi</title>
+</head>
+<body>
+  <h2>Form Registrasi</h2>
+  
+  <form id="registrationForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+    
+    <input type="submit" value="Register">
+  </form>
+  
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Mencegah form dikirimkan secara default
+    
+      // Mengambil nilai input
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var email = document.getElementById("email").value;
+      
+      // Mengirimkan data ke server atau melakukan validasi lainnya
+      // Di sini Anda dapat menambahkan logika untuk mengirimkan data ke server menggunakan AJAX atau mengubah URL untuk mengarahkan pengguna ke halaman terima kasih
+      
+      // Contoh output ke konsol
+      console.log("Username: " + username);
+      console.log("Password: " + password);
+      console.log("Email: " + email);
+      
+      // Menampilkan pesan sukses
+      alert("Registrasi berhasil!");
+      
+      // Mengosongkan input
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+      document.getElementById("email").value = "";
+    });
+  </script>
+</body>
+</html>
